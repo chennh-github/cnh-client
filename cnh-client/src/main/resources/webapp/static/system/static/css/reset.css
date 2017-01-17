@@ -1,0 +1,44 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}body,button,input,select,textarea,a{font:12px/1.5 tahoma, arial, simsun, sans-serif;color:#333}h1,h2,h3,h4,h5,h6{font-size:100%}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp{font-family:courier new, courier, monospace}small{font-size:12px}ul,ol{list-style:none}a{text-decoration:none}a:hover{text-decoration:underline}sup{vertical-align:text-top}sub{vertical-align:text-bottom}legend{color:#000}fieldset,img{border:0}button,input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{display:block;margin:0;padding:0}mark{background:#ff0}body{min-width:1000px;overflow:auto}
+/*# sourceMappingURL=reset.css.map */
+/*定义滚动条的高宽*/
+	::-webkit-scrollbar {
+	    width: 8px;
+	    height: 8px;
+	}
+	/*CSS的坐标系，左上角为(0,0),往右往下为增加，往上往左为减少*/
+	/*显示滚动条上方的渐增按钮*/
+	::-webkit-scrollbar-button:start:decrement,
+	/*显示滚动条上方的渐减按钮*/
+	::-webkit-scrollbar-button:end:increment {
+	    display: block;
+	}
+	/*隐藏滚动条上方的渐增按钮*/
+	::-webkit-scrollbar-button:vertical:start:increment,
+	::-webkit-scrollbar-button:vertical:end:decrement {
+	    display: none;
+	}
+	/* 定义滚动条渐增按扭的样式 */
+	::-webkit-scrollbar-button:end:increment {
+	    height: 0;
+	    width: 0;
+	}
+	/* 定义滚动条渐减按扭的样式 */
+	::-webkit-scrollbar-button:start:decrement {
+	    /*background: rgba(0, 0, 0, 1);*/
+	}
+	/* 垂直滚动条的第三层轨道的上段 */
+	::-webkit-scrollbar-track-piece:vertical:start {
+	    background: rgba(0, 0, 0, .1);
+	    border-radius: 50% 0 0 50%;
+	}
+	/* 垂直滚动条的第三层轨道的下段 */
+	::-webkit-scrollbar-track-piece:vertical:end {
+	    background: rgba(0, 0, 0, .1);
+	    border-radius: 0 50% 50% 0;
+	}
+	/* 垂直滚动条的滑动块 */
+	::-webkit-scrollbar-thumb:vertical {
+	    height: 36px;
+	    background: rgba(0, 0, 0, .7);
+	    border-radius: 4px;
+	}

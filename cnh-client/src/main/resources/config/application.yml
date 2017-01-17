@@ -1,0 +1,54 @@
+spring:
+    resources:
+        static-locations: classpath:/webapp/static/
+    freemarker:
+        allow-request-override: false
+        allow-session-override: false
+        cache: true
+        charset: UTF-8
+        check-template-location: true
+        content-type: text/html
+        enabled: true
+        expose-request-attributes: false
+        expose-session-attributes: false
+        expose-spring-macro-helpers: true
+        prefer-file-system-access: true
+        suffix: .ftl
+        template-loader-path: classpath:/webapp/views/
+        order: v4.3.0
+        settings:
+            template_update_delay: 0
+            default_encoding: UTF-8
+            classic_compatible: true
+
+multipart:
+    # File size limit
+    maxFileSize: 100Mb
+    # Total request size for a multipart/form-data
+    maxRequestSize: 100Mb
+
+# 日志配置
+logging:
+    level:
+        root: @log.level.root@
+
+# 自定义属性配置
+custom:
+    # 跨域配置
+    cors:
+        # 允许的跨域来源
+        allowedOrigin: '*'
+        # 允许的跨域请求头
+        allowedHeader: '*'
+        # 允许的跨域方法
+        allowedMethod: '*'
+    # 图片显示http地址：http://127.0.0.1:8080/
+    imgShowRoot: @imgShowRoot@
+    # 图片存储的服务器根目录：/usr/tomcat/webapps/
+    imgServerRoot: @imgServerRoot@
+    # 图片存储的相对父目录，拼接在imgServerRoot后
+    imgServerParentDir: upload/
+    # excel存储的相对地址，存储在工程目录下
+    xlsStoreRelativePath: store/xls
+    # api
+    api: @api@
